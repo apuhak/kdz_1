@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace kdz_1
 {
@@ -23,6 +24,8 @@ namespace kdz_1
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
     }
 }
