@@ -24,14 +24,8 @@ namespace kdz_1
         public MainWindow()
         {
             InitializeComponent();
-            
 
-        }
 
-        private void AddBrand_Click(object sender, RoutedEventArgs e)
-        {
-            addBrand ab = new addBrand();
-            ab.Show();
         }
     }
 }

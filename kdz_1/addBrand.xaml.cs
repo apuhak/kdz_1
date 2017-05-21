@@ -19,22 +19,18 @@ namespace kdz_1
     /// </summary>
     public partial class addBrand : Window
     {
-        
         public addBrand()
         {
             InitializeComponent();
-            
         }
 
-
-            private void Cancel_Click(object sender, RoutedEventArgs e)
-            {
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
             this.Close();
-            }
+        }
 
         private void SaveNewBrand_Click(object sender, RoutedEventArgs e)
         {
-            
             Brand brand = new Brand(TextBoxBrand.Text, TextBoxDescription.Text);
             List<Brand> lb = new List<Brand>();
 
@@ -42,8 +38,8 @@ namespace kdz_1
             //Serialization.Serialize();
             foreach (Brand b in lb)
             {
-                
+
             }
         }
     }
-    }
+}

@@ -12,8 +12,8 @@ namespace kdz_1
 
         public string Name
         {
-           get { return _name; }
-           set { _name = Name; }
+            get { return _name; }
+            set { _name = Name; }
         }
 
         private string _description;
@@ -29,6 +29,5 @@ namespace kdz_1
             Name = name;
             Description = description;
         }
-
     }
 }

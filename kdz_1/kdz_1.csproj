@@ -75,15 +75,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageParfume.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageParfume.xaml.cs">
-      <DependentUpon>PageParfume.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Perfume.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -112,8 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="BExpwuIAsE8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="upZK157w4Lk.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
