@@ -40,9 +40,9 @@ namespace kdz_1
             set { _kind = value; }
         }
 
-        private string _year;
+        private int _year;
 
-        public string Year
+        public int Year
         {
             get { return _year; }
             set { _year = value; }
@@ -56,17 +56,14 @@ namespace kdz_1
             set { _wayToPictue = value; }
         }
 
-        //private void ImageExampleForm_Paint(object sender, PaintEventArgs e)
-        //{
-        //    // Create image.
-        //    Image newImage = Image.FromFile("SampImag.jpg");
-
-        //    // Create Point for upper-left corner of image.
-        //    Point ulCorner = new Point(100, 100);
-
-        //    // Draw image to screen.
-        //    e.Graphics.DrawImage(newImage, ulCorner);
-        //}
+        public Perfume(string name, string gender, string description, string kind, int year)
+        {
+            Name = name;
+            Gender = gender;
+            Description = description;
+            Kind = kind;
+            Year = year;
+        }
 
     }
 }
