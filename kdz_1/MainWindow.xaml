@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kdz_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="625">
+        Title="MainWindow" Height="490" Width="655">
     <Grid Margin="0,0,2,0">
         <Button x:Name="btn" Content="" HorizontalAlignment="Left" Margin="506,431,0,0" VerticalAlignment="Top" Width="100" Height="28">
             <Button.Triggers>
@@ -21,16 +21,17 @@
                 </EventTrigger>
             </Button.Triggers>
         </Button>
-        <ListBox x:Name="ListBrand" HorizontalAlignment="Center" Height="155" Margin="30,261,34,0" VerticalAlignment="Top" Width="576"/>
 
 
 
 
 
-        <Button x:Name="AddBrand" Content="Добавить Бренд" HorizontalAlignment="Left" Margin="30,225,0,0" VerticalAlignment="Top" Width="115" Click="AddBrand_Click"/>
-        <Button x:Name="editBrandbtn" Content="Изменить Бренд" HorizontalAlignment="Left" Margin="165,225,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="deleteBrandbtn" Content="Удалить Бренд" HorizontalAlignment="Left" Margin="298,225,0,0" VerticalAlignment="Top" Width="110"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="237" Margin="10,9,0,0" VerticalAlignment="Top" Width="620" Source="upZK157w4Lk.jpg">
+        <Button x:Name="AddBrand" Content="Добавить Бренд" HorizontalAlignment="Left" Margin="9,223,0,0" VerticalAlignment="Top" Width="115" Click="AddBrand_Click"/>
+        <Button x:Name="editBrandbtn" Content="Изменить Бренд" HorizontalAlignment="Left" Margin="137,223,0,0" VerticalAlignment="Top" Width="115" Click="editBrandbtn_Click">
+
+        </Button>
+        <Button x:Name="deleteBrandbtn" Content="Удалить Бренд" HorizontalAlignment="Left" Margin="267,223,0,0" VerticalAlignment="Top" Width="110"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="216" Margin="10,9,-15,0" VerticalAlignment="Top" Width="620" Source="upZK157w4Lk.jpg">
             <Image.Triggers>
                 <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <EventTrigger.Actions>
@@ -49,7 +50,7 @@
 
         </Image>
 
-        <Image x:Name="image2" HorizontalAlignment="Left" Height="291" Margin="10,9,0,0" VerticalAlignment="Top" Width="621" Source="BExpwuIAsE8.jpg">
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="216" Margin="10,9,-16,0" VerticalAlignment="Top" Width="621" Source="BExpwuIAsE8.jpg">
             <Image.Triggers>
                 <EventTrigger RoutedEvent="FrameworkElement.Loaded">
                     <EventTrigger.Actions>
@@ -67,6 +68,8 @@
             </Image.Triggers>
 
         </Image>
+        <ListBox x:Name="listBoxBrand" HorizontalAlignment="Left" Height="158" Margin="10,252,0,0" VerticalAlignment="Top" Width="625"/>
+        <Button x:Name="Openbtn" Content="Открыть" HorizontalAlignment="Left" Margin="10,422,0,0" VerticalAlignment="Top" Width="75" Click="Openbtn_Click"/>
 
 
 

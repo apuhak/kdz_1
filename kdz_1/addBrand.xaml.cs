@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace kdz_1
 {
@@ -19,9 +21,12 @@ namespace kdz_1
     /// </summary>
     public partial class addBrand : Window
     {
-        public addBrand()
+        
+        MainWindow wnd;
+        public addBrand(MainWindow wnd1)
         {
             InitializeComponent();
+            wnd = wnd1;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -31,15 +36,25 @@ namespace kdz_1
 
         private void SaveNewBrand_Click(object sender, RoutedEventArgs e)
         {
-            Brand brand = new Brand(TextBoxBrand.Text, TextBoxDescription.Text);
-            List<Brand> lb = new List<Brand>();
-
-            lb.Add(brand);
-            //Serialization.Serialize();
-            foreach (Brand b in lb)
+            if (File.Exists("../../brand.xml"))
             {
-
+                wnd.lb = Serialization.Deserialize(wnd.lb);
             }
+            else
+            {
+               
+                wnd.lb.Brands = new List<Brand>();
+            }
+
+            Brand brand = new Brand(TextBoxBrand.Text, TextBoxDescription.Text);
+           
+            wnd.lb.Brands.Add(brand);
+
+            Serialization.Serialize_b(wnd.lb);
+            wnd.listBoxBrand.Items.Add(brand.Name);
+
+            this.Close();
+            
         }
     }
 }

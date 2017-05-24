@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace kdz_1
 {
-    class Perfume
+    [Serializable]
+    public class Perfume
     {
         private string _name;
 
@@ -40,9 +41,9 @@ namespace kdz_1
             set { _kind = value; }
         }
 
-        private string _year;
+        private int _year;
 
-        public string Year
+        public int Year
         {
             get { return _year; }
             set { _year = value; }
@@ -56,17 +57,20 @@ namespace kdz_1
             set { _wayToPictue = value; }
         }
 
-        //private void ImageExampleForm_Paint(object sender, PaintEventArgs e)
-        //{
-        //    // Create image.
-        //    Image newImage = Image.FromFile("SampImag.jpg");
+       public Perfume(string name, string gender, string description, string kind, int year, string waytopicture)
+        {
+            _name = name;
+            _gender = gender;
+            _description = description;
+            _kind = kind;
+            _year = year;
+            _wayToPictue = waytopicture;
+        }
 
-        //    // Create Point for upper-left corner of image.
-        //    Point ulCorner = new Point(100, 100);
+        public Perfume()
+        {
 
-        //    // Draw image to screen.
-        //    e.Graphics.DrawImage(newImage, ulCorner);
-        //}
+        }
 
     }
 }

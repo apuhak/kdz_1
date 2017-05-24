@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace kdz_1
 {
-    class Brand
+    [Serializable]
+    public class Brand
     {
         private string _name;
 
@@ -26,8 +27,15 @@ namespace kdz_1
 
         public Brand(string name, string description)
         {
-            Name = name;
-            Description = description;
+            _name = name;
+            _description = description;
         }
+
+        public Brand()
+        {
+
+        }
+
+
     }
 }

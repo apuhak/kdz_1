@@ -1,0 +1,19 @@
+﻿<Page x:Class="kdz_1.PageBrand"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:kdz_1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="655"
+      Title="PageBrand" WindowTitle="Page Brand">
+
+    <Grid>
+        <TextBlock x:Name="descriptionTextBlock" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="75" Width="610"/>
+        <ListBox x:Name="listBoxPerfume" HorizontalAlignment="Left" Height="285" Margin="10,115,0,0" VerticalAlignment="Top" Width="615"/>
+        <TextBlock x:Name="nameTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="132"/>
+        <Button x:Name="addperfumebtn" Content="Добавить парфюм" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="132"/>
+
+
+    </Grid>
+</Page>
