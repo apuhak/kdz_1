@@ -13,6 +13,7 @@
         <ListBox x:Name="listBoxPerfume" HorizontalAlignment="Left" Height="285" Margin="10,115,0,0" VerticalAlignment="Top" Width="615"/>
         <TextBlock x:Name="nameTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="132"/>
         <Button x:Name="addperfumebtn" Content="Добавить парфюм" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="LabelName" Content="" HorizontalAlignment="Left" Margin="272,12,0,0" VerticalAlignment="Top" Width="184"/>
 
 
     </Grid>

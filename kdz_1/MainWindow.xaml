@@ -59,16 +59,14 @@
                                 <DoubleAnimation 
                 Storyboard.TargetName="image2"
                 Storyboard.TargetProperty="(UIElement.Opacity)" 
-                                        
                 From="0" To="1" Duration="0:0:10" AutoReverse="True"   RepeatBehavior="Forever"  />
                             </Storyboard>
                         </BeginStoryboard>
                     </EventTrigger.Actions>
                 </EventTrigger>
             </Image.Triggers>
-
         </Image>
-        <ListBox x:Name="listBoxBrand" HorizontalAlignment="Left" Height="158" Margin="10,252,0,0" VerticalAlignment="Top" Width="625"/>
+        <ListBox x:Name="listBoxBrand" HorizontalAlignment="Left" Height="158" Margin="10,252,0,0" VerticalAlignment="Top" Width="625" SelectionChanged="listBoxBrand_SelectionChanged"/>
         <Button x:Name="Openbtn" Content="Открыть" HorizontalAlignment="Left" Margin="10,422,0,0" VerticalAlignment="Top" Width="75" Click="Openbtn_Click"/>
 
 

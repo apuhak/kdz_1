@@ -23,17 +23,18 @@ namespace kdz_1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int lbchanged = 0;
         public ListOfBrands lb = new ListOfBrands();       
         public MainWindow()
         {
             InitializeComponent();
             if (File.Exists("../../brand.xml"))
             {
-                //lb = Serialization.Deserialize(lb);
-                //foreach (var item in lb.Brands)
-                //{
-                //    listBoxBrand.Items.Add(item.Name.ToString());
-                //}
+                lb = Serialization.Deserialize(lb);
+                foreach (var item in lb.Brands)
+                {
+                    listBoxBrand.Items.Add(item.Name.ToString());
+                }
             }
             
 
@@ -57,7 +58,32 @@ namespace kdz_1
 
         private void Openbtn_Click(object sender, RoutedEventArgs e)
         {
-           
+            PageBrand pb = new PageBrand();
+            this.Content = new PageBrand();
+
+            if (lbchanged == 1)
+            {
+                foreach (var item in lb.Brands)
+                {
+                    if (listBoxBrand.SelectedItem.ToString() == item.Name)
+                    {
+                        // pb.LabelName.Content = item.Name;                        
+                        pb.nameTextBlock.Text = item.Name;
+                        pb.descriptionTextBlock.Text = item.Description;
+                        //item.Name == listBoxBrand.SelectedItem.ToString()
+                    }
+                }
+            }
+            else
+            {
+
+            }
+
+        }
+
+        private void listBoxBrand_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbchanged = 1;
         }
     }
 }

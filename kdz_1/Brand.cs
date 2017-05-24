@@ -14,7 +14,7 @@ namespace kdz_1
         public string Name
         {
             get { return _name; }
-            set { _name = Name; }
+            set { _name = value; }
         }
 
         private string _description;
@@ -22,13 +22,13 @@ namespace kdz_1
         public string Description
         {
             get { return _description; }
-            set { _description = Description; }
+            set { _description = value; }
         }
 
         public Brand(string name, string description)
         {
-            _name = name;
-            _description = description;
+            Name = name;
+            Description = description;
         }
 
         public Brand()

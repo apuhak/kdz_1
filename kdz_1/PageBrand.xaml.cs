@@ -22,6 +22,7 @@ namespace kdz_1
     /// </summary>
     public partial class PageBrand : Page
     {
+
         public PageBrand()
         {
             InitializeComponent();
