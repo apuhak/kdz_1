@@ -7,20 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="490" Width="655">
     <Grid Margin="0,0,2,0">
-        <Button x:Name="btn" Content="" HorizontalAlignment="Left" Margin="506,431,0,0" VerticalAlignment="Top" Width="100" Height="28">
-            <Button.Triggers>
-                <EventTrigger RoutedEvent="Mouse.MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <DoubleAnimation 
-                Storyboard.TargetName="btn"
-                Storyboard.TargetProperty="(UIElement.Opacity)" 
-                From="1" To="0" Duration="0:0:10" AutoReverse="True"  />
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Button.Triggers>
-        </Button>
 
 
 
@@ -66,8 +52,11 @@
                 </EventTrigger>
             </Image.Triggers>
         </Image>
-        <ListBox x:Name="listBoxBrand" HorizontalAlignment="Left" Height="158" Margin="10,252,0,0" VerticalAlignment="Top" Width="625" SelectionChanged="listBoxBrand_SelectionChanged"/>
+        <ListBox x:Name="listBoxBrand" HorizontalAlignment="Left" Height="158" Margin="10,252,0,0" VerticalAlignment="Top" Width="367" SelectionChanged="listBoxBrand_SelectionChanged"/>
         <Button x:Name="Openbtn" Content="Открыть" HorizontalAlignment="Left" Margin="10,422,0,0" VerticalAlignment="Top" Width="75" Click="Openbtn_Click"/>
+        <Button x:Name="Search" Content="Поиск" HorizontalAlignment="Left" Margin="556,223,0,0" VerticalAlignment="Top" Width="75" Click="Search_Click"/>
+        <TextBox x:Name="TextBoxSearch" HorizontalAlignment="Left" Height="23" Margin="405,223,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="ListBoxSearch" HorizontalAlignment="Left" Height="158" Margin="405,252,0,0" VerticalAlignment="Top" Width="226"/>
 
 
 

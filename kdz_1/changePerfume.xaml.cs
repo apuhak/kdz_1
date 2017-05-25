@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -10,8 +12,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
+using System.Xml.Serialization;
+using System.Drawing;
+using Microsoft.Win32;
+using System.Security.Cryptography;
+using System.Xml;
 
 namespace kdz_1
 {
@@ -44,6 +51,7 @@ namespace kdz_1
                     item.Brand = TextBoxBrand.Text;
                     item.Kind = TextBoxKind.Text;
                     item.Year = int.Parse(TextBoxYear.Text);
+                    item.WayToPic = TextBoxImage.Text;
 
                 }
                 Serialization.Serialize_p(pb.lp);
@@ -59,6 +67,26 @@ namespace kdz_1
                 }                    
             }
             this.Close();
+        }
+
+        private void Addpic_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPerfume wp = new WindowPerfume();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            openFileDialog.Filter = "jpeg|*.jpg";
+
+            var fileN = openFileDialog.FileName;
+            var newPath = System.IO.Path.GetFileName(fileN);
+            var curPAth = System.Reflection.Assembly.GetExecutingAssembly().Location;
+            newPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(curPAth) + "\\img\\", newPath);
+
+            if (!File.Exists(newPath))
+                File.Copy(fileN, newPath, true);
+            TextBoxImage.Text = newPath;
+            BitmapImage sharerimg;
+            sharerimg = new BitmapImage(new Uri(TextBoxImage.Text));
+            wp.Image.Source = sharerimg;
         }
     }
 }

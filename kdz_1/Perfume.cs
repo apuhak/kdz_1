@@ -48,14 +48,7 @@ namespace kdz_1
             get { return _year; }
             set { _year = value; }
         }
-
-        private string _wayToPictue;
-
-        public string WayToPicture
-        {
-            get { return _wayToPictue; }
-            set { _wayToPictue = value; }
-        }
+       
 
         private string _brand;
 
@@ -65,15 +58,23 @@ namespace kdz_1
             set { _brand = value; }
         }
 
-        public Perfume(string name, string gender, string description, string kind, int year, string waytopicture, string brand)
+        private string _waytopic;
+
+        public string WayToPic
+        {
+            get { return _waytopic; }
+            set { _waytopic = value; }
+        }
+
+        public Perfume(string name, string gender, string description, string kind, int year, string brand, string waytopic)
         {
             _name = name;
             _gender = gender;
             _description = description;
             _kind = kind;
-            _year = year;
-            _wayToPictue = waytopicture;
+            _year = year;            
             _brand = brand;
+            _waytopic = waytopic;
         }
 
         public Perfume()

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,7 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
-using System.IO;
+using System.Drawing;
+using Microsoft.Win32;
+using System.Security.Cryptography;
+using System.Xml;
 
 
 namespace kdz_1
@@ -23,6 +28,7 @@ namespace kdz_1
     /// </summary>
     public partial class PageBrand : Page
     {
+        addPerfume ap;
         MainWindow wnd;
         public ListOfPerfumes lp = new ListOfPerfumes();
         public PageBrand(MainWindow pb)
@@ -69,9 +75,7 @@ namespace kdz_1
 
         private void editPerfume_Click(object sender, RoutedEventArgs e)
         {
-            changePerfume changep = new changePerfume(this);
-            
-
+            changePerfume changep = new changePerfume(this);            
             foreach (var item in lp.Perfumes)
             {
                 if (listBoxPerfume.SelectedItem.ToString() == item.Name)
@@ -83,7 +87,8 @@ namespace kdz_1
                     changep.TextBoxBrand.Text = item.Brand;
                     changep.TextBoxKind.Text = item.Kind;
                     changep.TextBoxYear.Text = item.Year.ToString();
-                    changep.TextBoxImage.Text = item.WayToPicture;
+                    changep.TextBoxImage.Text = item.WayToPic.ToString();
+
 
                 }
             }
@@ -124,7 +129,10 @@ namespace kdz_1
                     wp.TextBlockDescription.Text = item.Description;
                     wp.TextBlockBrand.Text = item.Brand;
                     wp.TextblockKind.Text = item.Kind;
-                    wp.TextBlockYear.Text = item.Year.ToString();                   
+                    wp.TextBlockYear.Text = item.Year.ToString();
+                    BitmapImage img;
+                    img = new BitmapImage(new Uri(item.WayToPic.ToString()));
+                    wp.Image.Source = img;
 
                 }
             }

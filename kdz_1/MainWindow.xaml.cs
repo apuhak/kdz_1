@@ -36,8 +36,6 @@ namespace kdz_1
                     listBoxBrand.Items.Add(item.Name.ToString());
                 }
             }
-            
-
         }
 
         private void AddBrand_Click(object sender, RoutedEventArgs e)
@@ -92,7 +90,6 @@ namespace kdz_1
                     lb.Brands.Remove(item);
                     if (File.Exists(".../.../perfume.xml"))
                     {
-                        //pb.lp = Serialization.Deserialize_p(pb.lp);
                         foreach (var item_p in pb.lp.Perfumes)
                         {
                             if (item_p.Brand == listBoxBrand.SelectedItem.ToString())
@@ -111,6 +108,27 @@ namespace kdz_1
                     break;
                 }
             }           
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            ListBoxSearch.Items.Clear();
+            lb = Serialization.Deserialize_b(lb);
+            if (TextBoxSearch.Text != "")
+            {
+                foreach (var item in lb.Brands)
+                {
+                    if (item.Name.Contains(TextBoxSearch.Text))
+                    {
+                        ListBoxSearch.Items.Add(item.Name);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Введите поисковый запрос");
+            }
+            
         }
     }
 }
