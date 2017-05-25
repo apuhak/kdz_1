@@ -23,19 +23,21 @@ namespace kdz_1
     /// </summary>
     public partial class PagePurfume : Page
     {
+        
         public ListOfPerfumes lp = new ListOfPerfumes();
         public PagePurfume()
         {
             InitializeComponent();
-            if (File.Exists(".../.../perfume.xml"))
-            {
-                lp = Serialization.Deserialize(lp);
-                foreach (var item in lp.Perfumes)
-                {
-                    listBoxPerfume.Items.Add(item);
-                }
-            }
-            
+
+            //if (File.Exists(".../.../perfume.xml"))
+            //{
+            //    lp = Serialization.Deserialize_p(lp);
+            //    foreach (var item in lp.Perfumes)
+            //    {
+            //        listBoxPerfume.Items.Add(item);
+            //    }
+            //}
+
 
         }
     }

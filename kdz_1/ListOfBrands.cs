@@ -12,7 +12,7 @@ namespace kdz_1
     public class ListOfBrands
     {
 
-        public List<Brand> Brands { get; set; }
+        public List<Brand> Brands;
         public ListOfBrands(List<Brand> brands)
         {
             Brands = brands;

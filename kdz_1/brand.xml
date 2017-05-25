@@ -1,13 +1,4 @@
 <?xml version="1.0"?>
 <ListOfBrands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Brands>
-    <Brand>
-      <Name>asdfghjkgfdsa</Name>
-      <Description>sdfghjkhgdres</Description>
-    </Brand>
-    <Brand>
-      <Name>drdtyfhtres</Name>
-      <Description>sfertdyfgutre</Description>
-    </Brand>
-  </Brands>
+  <Brands />
 </ListOfBrands>

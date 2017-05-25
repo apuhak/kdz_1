@@ -30,7 +30,7 @@
         <Button x:Name="editBrandbtn" Content="Изменить Бренд" HorizontalAlignment="Left" Margin="137,223,0,0" VerticalAlignment="Top" Width="115" Click="editBrandbtn_Click">
 
         </Button>
-        <Button x:Name="deleteBrandbtn" Content="Удалить Бренд" HorizontalAlignment="Left" Margin="267,223,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="deleteBrandbtn" Content="Удалить Бренд" HorizontalAlignment="Left" Margin="267,223,0,0" VerticalAlignment="Top" Width="110" Click="deleteBrandbtn_Click"/>
         <Image x:Name="image1" HorizontalAlignment="Left" Height="216" Margin="10,9,-15,0" VerticalAlignment="Top" Width="620" Source="upZK157w4Lk.jpg">
             <Image.Triggers>
                 <EventTrigger RoutedEvent="FrameworkElement.Loaded">

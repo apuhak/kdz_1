@@ -23,10 +23,10 @@ namespace kdz_1
     {
         
         MainWindow wnd;
-        public addBrand(MainWindow wnd1)
+        public addBrand(MainWindow addwnd)
         {
             InitializeComponent();
-            wnd = wnd1;
+            wnd = addwnd;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -38,7 +38,7 @@ namespace kdz_1
         {
             if (File.Exists("../../brand.xml"))
             {
-                wnd.lb = Serialization.Deserialize(wnd.lb);
+                wnd.lb = Serialization.Deserialize_b(wnd.lb);
             }
             else
             {

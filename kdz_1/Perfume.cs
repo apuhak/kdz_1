@@ -57,7 +57,15 @@ namespace kdz_1
             set { _wayToPictue = value; }
         }
 
-       public Perfume(string name, string gender, string description, string kind, int year, string waytopicture)
+        private string _brand;
+
+        public string Brand
+        {
+            get { return _brand; }
+            set { _brand = value; }
+        }
+
+        public Perfume(string name, string gender, string description, string kind, int year, string waytopicture, string brand)
         {
             _name = name;
             _gender = gender;
@@ -65,6 +73,7 @@ namespace kdz_1
             _kind = kind;
             _year = year;
             _wayToPictue = waytopicture;
+            _brand = brand;
         }
 
         public Perfume()

@@ -30,7 +30,7 @@ namespace kdz_1
             InitializeComponent();
             if (File.Exists("../../brand.xml"))
             {
-                lb = Serialization.Deserialize(lb);
+                lb = Serialization.Deserialize_b(lb);
                 foreach (var item in lb.Brands)
                 {
                     listBoxBrand.Items.Add(item.Name.ToString());
@@ -48,42 +48,69 @@ namespace kdz_1
 
         private void editBrandbtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = new PageBrand();
-            //NavigationWindow window = new NavigationWindow();
-            //window.Source = new Uri("PagePurfume.xaml", UriKind.Relative);
-            //this.Close();
-            //window.Show();
+            changeBrand change = new changeBrand(this);
+            
+            foreach (var item in lb.Brands)
+            {
 
+                if (listBoxBrand.SelectedItem.ToString() == item.Name)
+                {
+                    change.Show();
+                    foreach (var brand in lb.Brands)
+                    {
+                        if (listBoxBrand.SelectedItem.ToString() == brand.Name)
+                        {
+
+                            change.TextBoxBrand.Text = brand.Name;
+                            change.TextBoxDescription.Text = brand.Description;
+
+                        }
+                    }
+                }
+            }
         }
 
         private void Openbtn_Click(object sender, RoutedEventArgs e)
         {
-            PageBrand pb = new PageBrand();
-            this.Content = new PageBrand();
-
-            if (lbchanged == 1)
-            {
-                foreach (var item in lb.Brands)
-                {
-                    if (listBoxBrand.SelectedItem.ToString() == item.Name)
-                    {
-                        // pb.LabelName.Content = item.Name;                        
-                        pb.nameTextBlock.Text = item.Name;
-                        pb.descriptionTextBlock.Text = item.Description;
-                        //item.Name == listBoxBrand.SelectedItem.ToString()
-                    }
-                }
-            }
-            else
-            {
-
-            }
-
+            this.Content = new PageBrand(this);
+            this.Show();
         }
 
         private void listBoxBrand_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             lbchanged = 1;
+        }
+
+        private void deleteBrandbtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageBrand pb = new PageBrand(this);
+            foreach (var item in lb.Brands)
+            {
+                
+                if (listBoxBrand.SelectedItem.ToString() == item.Name)
+                {
+                    lb.Brands.Remove(item);
+                    if (File.Exists(".../.../perfume.xml"))
+                    {
+                        //pb.lp = Serialization.Deserialize_p(pb.lp);
+                        foreach (var item_p in pb.lp.Perfumes)
+                        {
+                            if (item_p.Brand == listBoxBrand.SelectedItem.ToString())
+                            {
+                                pb.lp.Perfumes.Remove(item_p);
+                                Serialization.Serialize_p(pb.lp);
+                                pb.listBoxPerfume.Items.Remove(item_p);
+                            }
+                        }
+                    }
+                    
+                    
+                    
+                    Serialization.Serialize_b(lb);
+                    listBoxBrand.Items.Remove(listBoxBrand.SelectedItem);
+                    break;
+                }
+            }           
         }
     }
 }

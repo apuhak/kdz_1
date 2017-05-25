@@ -9,11 +9,13 @@
       Title="PageBrand" WindowTitle="Page Brand">
 
     <Grid>
-        <TextBlock x:Name="descriptionTextBlock" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="75" Width="610"/>
+        <TextBlock x:Name="descriptionTextBlock" HorizontalAlignment="Left" Margin="10,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="610" FontSize="14"/>
         <ListBox x:Name="listBoxPerfume" HorizontalAlignment="Left" Height="285" Margin="10,115,0,0" VerticalAlignment="Top" Width="615"/>
-        <TextBlock x:Name="nameTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="20" Width="132"/>
-        <Button x:Name="addperfumebtn" Content="Добавить парфюм" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="132"/>
+        <TextBlock x:Name="nameTextBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="132" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="addperfumebtn" Content="Добавить парфюм" HorizontalAlignment="Left" Margin="10,405,0,0" VerticalAlignment="Top" Width="132" Click="addperfumebtn_Click"/>
         <Label x:Name="LabelName" Content="" HorizontalAlignment="Left" Margin="272,12,0,0" VerticalAlignment="Top" Width="184"/>
+        <Button x:Name="editPerfume" Content="Изменить парфюм" HorizontalAlignment="Left" Margin="150,405,0,0" VerticalAlignment="Top" Width="120" Click="editPerfume_Click"/>
+        <Button x:Name="deletePerfume" Content="Удалить парфюм" HorizontalAlignment="Left" Margin="280,405,0,0" VerticalAlignment="Top" Width="115"/>
 
 
     </Grid>

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace kdz_1
 {
     /// <summary>
-    /// Логика взаимодействия для addPurfume.xaml
+    /// Логика взаимодействия для changePerfume.xaml
     /// </summary>
-    public partial class addPurfume : Window
+    public partial class changePerfume : Window
     {
-        public addPurfume()
+        public changePerfume()
         {
             InitializeComponent();
         }

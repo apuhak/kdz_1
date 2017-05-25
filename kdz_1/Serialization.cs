@@ -23,7 +23,7 @@ namespace kdz_1
             }
         }
 
-        public static ListOfBrands Deserialize(ListOfBrands lb)
+        public static ListOfBrands Deserialize_b(ListOfBrands lb)
         {
             ListOfBrands data = new ListOfBrands();
             using (FileStream fs = new FileStream(file_brand, FileMode.Open))
@@ -34,18 +34,18 @@ namespace kdz_1
         }
 
 
-        public static void Serialize_b(ListOfPerfumes lp)
+        public static void Serialize_p(ListOfPerfumes lp)
         {
             using (FileStream fs = new FileStream(file_perfume, FileMode.Create))
             {
-                xs_brand.Serialize(fs, lp);
+                xs_perfume.Serialize(fs, lp);
             }
         }
 
-        public static ListOfPerfumes Deserialize(ListOfPerfumes lp)
+        public static ListOfPerfumes Deserialize_p(ListOfPerfumes lp)
         {
             ListOfPerfumes data = new ListOfPerfumes();
-            using (FileStream fs = new FileStream(file_brand, FileMode.Open))
+            using (FileStream fs = new FileStream(file_perfume, FileMode.Open))
             {
                 data = (ListOfPerfumes)xs_perfume.Deserialize(fs);
             }

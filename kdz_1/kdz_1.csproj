@@ -54,8 +54,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="addPurfume.xaml.cs">
-      <DependentUpon>addPurfume.xaml</DependentUpon>
+    <Compile Include="addPerfume.xaml.cs">
+      <DependentUpon>addPerfume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changeBrand.xaml.cs">
+      <DependentUpon>changeBrand.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="changePerfume.xaml.cs">
+      <DependentUpon>changePerfume.xaml</DependentUpon>
     </Compile>
     <Compile Include="ListOfBrands.cs" />
     <Compile Include="ListOfPerfumes.cs" />
@@ -63,14 +69,19 @@
       <DependentUpon>PagePurfume.xaml</DependentUpon>
     </Compile>
     <Compile Include="Serialization.cs" />
-    <Compile Include="WindowPerfume.xaml.cs">
-      <DependentUpon>WindowPerfume.xaml</DependentUpon>
-    </Compile>
     <Page Include="addBrand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="addPurfume.xaml">
+    <Page Include="addPerfume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changeBrand.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="changePerfume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,10 +107,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PagePurfume.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="WindowPerfume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
