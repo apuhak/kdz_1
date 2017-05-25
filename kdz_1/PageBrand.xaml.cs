@@ -29,6 +29,7 @@ namespace kdz_1
         {
             wnd = pb;
             InitializeComponent();
+            
                 if (wnd.lbchanged == 1)
                 {
                     foreach (var item in wnd.lb.Brands)
@@ -68,7 +69,65 @@ namespace kdz_1
 
         private void editPerfume_Click(object sender, RoutedEventArgs e)
         {
+            changePerfume changep = new changePerfume(this);
+            
 
+            foreach (var item in lp.Perfumes)
+            {
+                if (listBoxPerfume.SelectedItem.ToString() == item.Name)
+                {
+                    changep.Show();
+                    changep.TextBoxPerfume.Text = item.Name;
+                    changep.ComboBoxGender.Text = item.Gender;
+                    changep.TextBoxDescription.Text = item.Description;
+                    changep.TextBoxBrand.Text = item.Brand;
+                    changep.TextBoxKind.Text = item.Kind;
+                    changep.TextBoxYear.Text = item.Year.ToString();
+                    changep.TextBoxImage.Text = item.WayToPicture;
+
+                }
+            }
+
+            
+
+        }
+
+        private void deletePerfume_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var item in lp.Perfumes)
+            {
+                if (listBoxPerfume.SelectedItem.ToString() == item.Name)
+                {
+                    lp.Perfumes.Remove(item);
+                    Serialization.Serialize_p(lp);
+                    listBoxPerfume.Items.Remove(listBoxPerfume.SelectedItem);
+                    break;
+                }
+            }
+
+
+
+            
+        }
+
+        private void OpenPerfume_Click(object sender, RoutedEventArgs e)
+        {
+            WindowPerfume wp = new WindowPerfume();
+            wp.Show();
+
+            foreach (var item in lp.Perfumes)
+            {
+                if (listBoxPerfume.SelectedItem.ToString() == item.Name)
+                {                    
+                    wp.TextBlockName.Text = item.Name;
+                    wp.TextBlockGender.Text = item.Gender;
+                    wp.TextBlockDescription.Text = item.Description;
+                    wp.TextBlockBrand.Text = item.Brand;
+                    wp.TextblockKind.Text = item.Kind;
+                    wp.TextBlockYear.Text = item.Year.ToString();                   
+
+                }
+            }
         }
     }
     }

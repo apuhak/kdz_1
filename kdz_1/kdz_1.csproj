@@ -65,10 +65,10 @@
     </Compile>
     <Compile Include="ListOfBrands.cs" />
     <Compile Include="ListOfPerfumes.cs" />
-    <Compile Include="PagePurfume.xaml.cs">
-      <DependentUpon>PagePurfume.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Serialization.cs" />
+    <Compile Include="WindowPerfume.xaml.cs">
+      <DependentUpon>WindowPerfume.xaml</DependentUpon>
+    </Compile>
     <Page Include="addBrand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -106,7 +106,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PagePurfume.xaml">
+    <Page Include="WindowPerfume.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

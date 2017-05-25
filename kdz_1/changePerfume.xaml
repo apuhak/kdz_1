@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kdz_1"
         mc:Ignorable="d"
-        Title="changePerfume" Height="300" Width="300">
+        Title="Изменить парфюм" Height="350" Width="300">
     <Grid>
-        
+        <Button x:Name="SaveNewPerfume" Content="Изменить" HorizontalAlignment="Left" Margin="207,288,0,0" VerticalAlignment="Top" Width="75" Click="SaveNewPerfume_Click"/>
+        <Button x:Name="Cancel" Content="Отменить" HorizontalAlignment="Left" Margin="127,288,0,0" VerticalAlignment="Top" Width="75" Click="Cancel_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,14,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top" Width="64"/>
+        <TextBox x:Name="TextBoxPerfume" HorizontalAlignment="Left" Height="23" Margin="115,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,156,0,0" TextWrapping="Wrap" Text="Описание
+" VerticalAlignment="Top" Width="58"/>
+        <TextBox x:Name="TextBoxDescription" HorizontalAlignment="Left" Height="61" Margin="115,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,49,0,0" TextWrapping="Wrap" Text="Пол" VerticalAlignment="Top"/>
+        <ComboBox x:Name="ComboBoxGender" HorizontalAlignment="Left" Margin="115,45,0,0" VerticalAlignment="Top" Width="167">
+            <TextBlock>мужской</TextBlock>
+            <TextBlock>женский</TextBlock>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="20,83,0,0" TextWrapping="Wrap" Text="Тип" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxKind" HorizontalAlignment="Left" Height="23" Margin="115,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,116,0,0" TextWrapping="Wrap" Text="Год" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxYear" HorizontalAlignment="Left" Height="23" Margin="115,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,263,0,0" TextWrapping="Wrap" Text="Картинка" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxImage" HorizontalAlignment="Left" Height="23" Margin="115,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,229,0,0" TextWrapping="Wrap" Text="Бренд" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBoxBrand" HorizontalAlignment="Left" Height="23" Margin="115,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167"/>
+
     </Grid>
 </Window>

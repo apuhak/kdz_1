@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
 <ListOfBrands xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Brands />
+  <Brands>
+    <Brand>
+      <Name>345</Name>
+      <Description>2345</Description>
+    </Brand>
+  </Brands>
 </ListOfBrands>

@@ -1,4 +1,14 @@
 <?xml version="1.0"?>
 <ListOfPerfumes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Perfumes />
+  <Perfumes>
+    <Perfume>
+      <Name>435</Name>
+      <Gender>мужской</Gender>
+      <Description>2435</Description>
+      <Kind>2345</Kind>
+      <Year>2345</Year>
+      <WayToPicture>5647675</WayToPicture>
+      <Brand>345</Brand>
+    </Perfume>
+  </Perfumes>
 </ListOfPerfumes>
