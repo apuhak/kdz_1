@@ -40,7 +40,7 @@ namespace kdz_1
                 {
                     foreach (var item in wnd.lb.Brands)
                     {
-                        if (wnd.listBoxBrand.SelectedItem.ToString() == item.Name)
+                        if (wnd.listBoxBrand.SelectedItem.ToString() == item.Name || wnd.ListBoxSearch.SelectedItem.ToString() == item.Name)
                         {
                             this.nameTextBlock.Text = item.Name.ToString();
                             this.descriptionTextBlock.Text = item.Description;

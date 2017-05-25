@@ -47,23 +47,33 @@ namespace kdz_1
         private void editBrandbtn_Click(object sender, RoutedEventArgs e)
         {
             changeBrand change = new changeBrand(this);
-            
+
             foreach (var item in lb.Brands)
             {
-
-                if (listBoxBrand.SelectedItem.ToString() == item.Name)
+                try
                 {
-                    change.Show();
-                    foreach (var brand in lb.Brands)
+
+
+                    if (listBoxBrand.SelectedItem.ToString() == item.Name || ListBoxSearch.SelectedItem.ToString() == listBoxBrand.SelectedItem.ToString())
                     {
-                        if (listBoxBrand.SelectedItem.ToString() == brand.Name)
+                        change.Show();
+                        foreach (var brand in lb.Brands)
                         {
+                            if (listBoxBrand.SelectedItem.ToString() == brand.Name)
+                            {
 
-                            change.TextBoxBrand.Text = brand.Name;
-                            change.TextBoxDescription.Text = brand.Description;
+                                change.TextBoxBrand.Text = brand.Name;
+                                change.TextBoxDescription.Text = brand.Description;
 
+                            }
                         }
                     }
+
+                }
+                catch (Exception a)
+                {
+
+                    MessageBox.Show("Выберите элемент из основного списка");
                 }
             }
         }
@@ -84,30 +94,41 @@ namespace kdz_1
             PageBrand pb = new PageBrand(this);
             foreach (var item in lb.Brands)
             {
-                
-                if (listBoxBrand.SelectedItem.ToString() == item.Name)
+                try
                 {
-                    lb.Brands.Remove(item);
-                    if (File.Exists(".../.../perfume.xml"))
+
+
+
+                    if (listBoxBrand.SelectedItem.ToString() == item.Name || ListBoxSearch.SelectedItem.ToString() == listBoxBrand.SelectedItem.ToString())
                     {
-                        foreach (var item_p in pb.lp.Perfumes)
+                        lb.Brands.Remove(item);
+                        if (File.Exists(".../.../perfume.xml"))
                         {
-                            if (item_p.Brand == listBoxBrand.SelectedItem.ToString())
+                            foreach (var item_p in pb.lp.Perfumes)
                             {
-                                pb.lp.Perfumes.Remove(item_p);
-                                Serialization.Serialize_p(pb.lp);
-                                pb.listBoxPerfume.Items.Remove(item_p);
+                                if (item_p.Brand == listBoxBrand.SelectedItem.ToString())
+                                {
+                                    pb.lp.Perfumes.Remove(item_p);
+                                    Serialization.Serialize_p(pb.lp);
+                                    pb.listBoxPerfume.Items.Remove(item_p);
+                                }
                             }
                         }
+
+
+
+                        Serialization.Serialize_b(lb);
+                        listBoxBrand.Items.Remove(listBoxBrand.SelectedItem);
+                        break;
                     }
-                    
-                    
-                    
-                    Serialization.Serialize_b(lb);
-                    listBoxBrand.Items.Remove(listBoxBrand.SelectedItem);
-                    break;
                 }
-            }           
+
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Выберите элемент из основного списка");
+                }
+            }
         }
 
         private void Search_Click(object sender, RoutedEventArgs e)
